@@ -5,10 +5,10 @@
 
 Listado de temas del módulo 3:
 
-1. [Gestión de base de datos](/merolhack/bedu-equipo5-m3-postworks/pw1)
-2. [Multi Hilos y procesos concurrentes](/merolhack/bedu-equipo5-m3-postworks/pw2)
-3. [Programación Funcional](/merolhack/bedu-equipo5-m3-postworks/pw3)
-4. [Procesos asíncronos](/merolhack/bedu-equipo5-m3-postworks/pw4)
-5. [Stream Reactivos](/merolhack/bedu-equipo5-m3-postworks/pw5)
-6. [Clases Genéricas](/merolhack/bedu-equipo5-m3-postworks/pw6)
-7. [Microservicios](/merolhack/bedu-equipo5-m3-postworks/pw7)
+1. [Gestión de base de datos](./pw1/README.md)
+2. [Multi Hilos y procesos concurrentes](./pw2/README.md)
+3. [Programación Funcional](./pw3/README.md)
+4. [Procesos asíncronos](./pw4/README.md)
+5. [Stream Reactivos](./pw5/README.md)
+6. [Clases Genéricas](./pw6/README.md)
+7. [Microservicios](./pw7/README.md)
