@@ -16,6 +16,9 @@ import java.util.Map;
 @Entity
 @Table(name="courses")
 public class Course {
+
+    public static final Integer NO_SCORE = -100;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
@@ -30,8 +33,8 @@ public class Course {
     private Subject subject;
 
     @ElementCollection
-    @CollectionTable(name = "courses_has_students", joinColumns = {@JoinColumn(name = "courses_FK", referencedColumnName = "id")})
-    @MapKeyJoinColumn(name = "students_FK", referencedColumnName = "id")
+    @CollectionTable(name = "courses_has_students", joinColumns = {@JoinColumn(name = "course_id", referencedColumnName = "id")})
+    @MapKeyJoinColumn(name = "student_id", referencedColumnName = "id")
     @Column(name = "score")
     private Map<Student, Integer> score;
 
