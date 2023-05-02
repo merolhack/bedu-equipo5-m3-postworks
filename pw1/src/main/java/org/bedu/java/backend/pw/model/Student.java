@@ -1,9 +1,6 @@
 package org.bedu.java.backend.pw.model;
 
-import lombok.Builder;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
@@ -13,6 +10,8 @@ import java.sql.Timestamp;
 @Getter
 @EqualsAndHashCode
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name="students")
 public class Student {
