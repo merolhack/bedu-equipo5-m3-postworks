@@ -1,13 +1,13 @@
-package org.bedu.postwork.javase2project;
+package org.bedu.java.backend.pw;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Javase2ProjectApplication {
+public class PwApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Javase2ProjectApplication.class, args);
+		SpringApplication.run(PwApplication.class, args);
 	}
 
 }

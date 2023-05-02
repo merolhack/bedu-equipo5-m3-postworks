@@ -1,10 +1,10 @@
-package org.bedu.postwork.javase2project;
+package org.bedu.java.backend.pw;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Javase2ProjectApplicationTests {
+class PwApplicationTests {
 
 	@Test
 	void contextLoads() {
