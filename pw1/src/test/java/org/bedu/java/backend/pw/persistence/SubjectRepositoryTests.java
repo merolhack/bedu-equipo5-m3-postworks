@@ -23,15 +23,19 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 public class SubjectRepositoryTests {
 
     @Autowired
+    private StudentRepository studentRepository;
+
+    @Autowired
     private SubjectRepository subjectRepository;
 
     @Autowired
     private CourseRepository courseRepository;
 
     @BeforeAll
-    void cleanDatabases(){
-        courseRepository.deleteAll();
+    void cleanDatabases() {
         subjectRepository.deleteAll();
+        studentRepository.deleteAll();
+        courseRepository.deleteAll();
     }
 
     @Test

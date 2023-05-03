@@ -1,6 +1,8 @@
 package org.bedu.java.backend.pw.model;
 
 import lombok.*;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
@@ -30,6 +32,7 @@ public class Course {
 
     @ManyToOne
     @JoinColumn(name = "subject_id", referencedColumnName = "id")
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private Subject subject;
 
     @ElementCollection
