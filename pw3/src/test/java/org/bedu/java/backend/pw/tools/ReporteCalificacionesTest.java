@@ -61,8 +61,8 @@ class ReporteCalificacionesTest {
     @BeforeAll
     @DisplayName("Smoke test")
     void smokeTest() {
-        studentRepository.deleteAll();
         courseRepository.deleteAll();
+        studentRepository.deleteAll();
         subjectRepository.deleteAll();
 
         Timestamp currentTimestamp = new Timestamp(System.currentTimeMillis());

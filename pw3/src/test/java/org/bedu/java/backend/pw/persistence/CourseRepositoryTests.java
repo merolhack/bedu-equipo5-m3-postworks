@@ -26,8 +26,6 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class CourseRepositoryTests {
 
-
-
     @Autowired
     private StudentRepository studentRepository;
 
@@ -39,8 +37,8 @@ public class CourseRepositoryTests {
 
     @BeforeAll
     void cleanDatabases() {
-        studentRepository.deleteAll();
         courseRepository.deleteAll();
+        studentRepository.deleteAll();
         subjectRepository.deleteAll();
     }
 

@@ -24,14 +24,22 @@ public class StudentRepositoryTests {
     @Autowired
     private StudentRepository studentRepository;
 
+    @Autowired
+    private SubjectRepository subjectRepository;
+
+    @Autowired
+    private CourseRepository courseRepository;
+
     @BeforeAll
-    void cleanDatabases(){
+    void cleanDatabases() {
+        courseRepository.deleteAll();
+        subjectRepository.deleteAll();
         studentRepository.deleteAll();
     }
 
     @Test
     @DisplayName("Smoke test")
-    void smokeTest(){
+    void smokeTest() {
         Timestamp currentTimestamp = new Timestamp(System.currentTimeMillis());
 
         Student student = new Student();

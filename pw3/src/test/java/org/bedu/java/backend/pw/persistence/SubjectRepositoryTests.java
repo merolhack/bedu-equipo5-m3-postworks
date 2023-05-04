@@ -1,5 +1,6 @@
 package org.bedu.java.backend.pw.persistence;
 
+import org.bedu.java.backend.pw.model.Course;
 import org.bedu.java.backend.pw.model.Subject;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
@@ -22,15 +23,19 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 public class SubjectRepositoryTests {
 
     @Autowired
+    private StudentRepository studentRepository;
+
+    @Autowired
     private SubjectRepository subjectRepository;
 
     @Autowired
     private CourseRepository courseRepository;
 
     @BeforeAll
-    void cleanDatabases(){
-        courseRepository.deleteAll();
+    void cleanDatabases() {
         subjectRepository.deleteAll();
+        studentRepository.deleteAll();
+        courseRepository.deleteAll();
     }
 
     @Test
