@@ -2,6 +2,8 @@ package org.bedu.java.backend.pw.model;
 
 import lombok.*;
 import org.hibernate.annotations.Formula;
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
@@ -32,15 +34,9 @@ public class Course implements Comparable<Course> {
 
     @ManyToOne
     @JoinColumn(name = "subject_id", referencedColumnName = "id")
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private Subject subject;
 
-
-    //@ElementCollection
-    //@CollectionTable(name = "subjects", joinColumns = {@JoinColumn(name = "subject_id", referencedColumnName = "id")})
-   // @MapKeyJoinColumn(name = "subject_id", referencedColumnName = "id", )
-    //@Column(name = "name")
-    //@JoinTable(name = "subjects",joinColumns = { @JoinColumn(name = "subject_id", referencedColumnName = "id") })
-    //@MapKeyColumn(  )
     @Formula("(select subjects.name from subjects where subjects.id = subject_id)")
     private String subjectName;
 
@@ -52,7 +48,6 @@ public class Course implements Comparable<Course> {
 
     @Column(name="created_at")
     private Timestamp createdAt;
-
 
     @Override
     public boolean equals(Object o) {
